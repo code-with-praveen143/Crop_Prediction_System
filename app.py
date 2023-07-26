@@ -26,8 +26,8 @@ def hello():
        rain=float(rain)
        feature=([[nitrogen,phosporous,pottasium,temp,humidity,ph,rain]])        
        result=model.predict(feature)
-       pic="https://source.unsplash.com/720x400/?"+result[0]
+       pic=result[0]
        print(pic)
-       return render_template('view.html',pic=pic,result=result[0])
+       return render_template('view.html',result=result[0])
 
 app.run(debug=True)
